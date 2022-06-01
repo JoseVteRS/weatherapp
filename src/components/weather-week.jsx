@@ -1,9 +1,16 @@
-import React from 'react'
+import WeatherDayCard from "./weather-day-card";
+import style from "./weather-week.module.css";
 
 const WeatherWeek = () => {
     return (
-        <div>WeatherWeek</div>
-    )
-}
+        <div className={style.wrapper}>
+            <WeatherDayCard />
+            <WeatherDayCard />
+            <WeatherDayCard />
+            <WeatherDayCard />
+            <WeatherDayCard />
+        </div>
+    );
+};
 
-export default WeatherWeek
+export default WeatherWeek;

@@ -1,0 +1,9 @@
+.button {
+    background-color: var(--color-gray-400);
+    color: var(--color-gray-100);
+    border: none;
+    outline: none;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    font-size: 1rem;
+}

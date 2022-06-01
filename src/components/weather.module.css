@@ -1,0 +1,44 @@
+.wrapper {
+    padding: 2rem 0;
+    background-color: var(--color-primary);
+    text-align: center;
+}
+
+.temperature {
+    font-size: 3rem;
+    color: var(--color-gray-100);
+    font-weight: bold;
+}
+
+.temperature span {
+    font-size: 2rem;
+    color: var(--color-gray-300);
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--color-gray-300);
+    margin: 3rem 0;
+}
+
+.dateCityWrapper {
+    margin-top: 4rem;
+    color: var(--color-gray-300);
+}
+
+.dateCityWrapper div {
+    margin: 0.5rem 0;
+}
+
+.dateCityWrapper .date {
+}
+
+.dateCityWrapper .city {
+    display: flex;
+    color: var(--color-gray-300);
+    place-content: center;
+}
+
+.cityIcon {
+    fill: var(--color-gray-300);
+}

@@ -1,0 +1,34 @@
+/*  */
+
+.card {
+    background-color: var(--color-primary);
+    padding: 0.5rem;
+}
+
+.card h2 {
+    font-size: 1rem;
+}
+
+.imgWrapper {
+    width: 100%;
+}
+
+.imgWrapper img {
+    width: 50%;
+}
+
+.tempWrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.maxTemp {
+    color: var(--color-gray-100);
+}
+
+.minTemp {
+    color: var(--color-gray-300);
+}

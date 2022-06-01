@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import WeatherDayCard from './components/weather-day-card.jsx'
+import WeatherWeek from "./components/weather-week.jsx";
+import Weather from "./components/weather.jsx";
 
+import MainLayout from "./layouts/main-layout.jsx";
 
 function App() {
-
-  return (
-    <div>
-      <WeatherDayCard />
-    </div>
-  )
+    return (
+        <MainLayout>
+            <Weather />
+            <WeatherWeek />
+        </MainLayout>
+    );
 }
 
-export default App
+export default App;
