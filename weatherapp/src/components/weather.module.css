@@ -1,6 +1,6 @@
 .wrapper {
     padding: 2rem 0;
-    background-color: var(--color-primary);
+    background: var(--color-primary), url("src/public/assets/images/Cloud-background.jpg") no-repeat center center;
     text-align: center;
 }
 
