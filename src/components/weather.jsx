@@ -1,3 +1,4 @@
+import { formatDate } from "../lib/format-date";
 import { useCurrentWeather } from "../lib/hooks/use-current-weather";
 import Button from "./elements/button";
 import LocationIcon from "./icons/location-icon";
@@ -14,15 +15,20 @@ const Weather = () => {
             <Button label="Search for places" onClick={() => console.log("Click Search for places")} />
 
             <div className={style.temperature}>
-                {weather.main.temp} <span>ºC</span>
+                {weather.current.temp_c} <span>ºC</span>
             </div>
 
-            <div className={style.description}>{weather.weather[0].description}</div>
+            <div>
+                <img src={weather.current.condition.icon} alt="" />
+            </div>
+
+            <div className={style.description}>{weather.current.condition.text}</div>
 
             <div className={style.dateCityWrapper}>
-                <div className={style.date}>Hoy - Miercoles, 01 de Junio</div>
+                <div className={style.date}>Hoy ▪ {formatDate(weather.location.localtime)}</div>
                 <div className={style.city}>
-                    <LocationIcon className={style.cityIcon} /> {weather.name}
+                    <LocationIcon className={style.cityIcon} /> {weather.location.name}
+                    {weather.location.region}
                 </div>
             </div>
         </div>

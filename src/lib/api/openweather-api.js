@@ -1,5 +1,7 @@
 // import { currentWeatherMapper } from "../mappers/weather-api.mapper";
 
+import { BASE_URL } from "../constants/weather";
+
 const weatherFetch = async (url, signal) => {
     try {
         const res = await fetch(url, { signal });
@@ -22,12 +24,12 @@ const weatherFetch = async (url, signal) => {
 };
 
 export const getCurrentWeather = async (signal) => {
-    const url = `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=auto:ip&aqi=no&lang=es`;
+    const url = `${BASE_URL.openWeatherApiUrl}`;
     return await weatherFetch(url, signal);
 };
 
 export const getForecastWeather = async (signal) => {
-    const url = `https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=London&days=5&aqi=no&alerts=no`;
+    const url = `${BASE_URL.openWeatherApiUrl}`;
     return await weatherFetch(url, signal);
 };
 
